@@ -7,13 +7,19 @@
 </head>
 <body>
     <div id="game">
-        <h1>Gagamus</h1>
-        <p>T’as 6 essais pour deviner le mot gaga du jour ! Un seul mot par jour, le même pour tout le monde.</p>
+        <h1>GAGAMUS</h1>
+        <p class="subtitle">En VO 100% GAGA</p>
+        <p>T’as 6 essais pour choper le mot gaga du jour ! Un mot, un jour, pour tous.</p>
+        <div id="legend">
+            <span class="legend-item correct">A</span> Bien placé 
+            <span class="legend-item misplaced">A</span> Mal placé 
+            <span class="legend-item wrong">A</span> Pas là
+        </div>
         <div id="grid"></div>
         <div id="keyboard"></div>
         <div id="message"></div>
-        <button id="replay-btn" style="display:none;">Un aut’ coup demain, gaga ?</button>
-        <button id="share-btn" style="display:none;">Partager</button>
+        <button id="replay-btn" style="display:none;">Rejoue demain, gaga !</button>
+        <button id="share-btn" style="display:none;">Partage</button>
     </div>
     <script src="script.js"></script>
 </body>
