@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(45deg, #2e7d32, #ffca28, #b0bec5, #2e7d32);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    color: #333;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+
+#game {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #2e7d32;
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#grid {
+    display: grid;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: white;
+    transition: transform 0.2s;
+}
+
+.cell:hover {
+    transform: scale(1.05);
+}
+
+.cell.active {
+    border-color: #2e7d32;
+    background-color: #f5f5f5;
+}
+
+.cell.correct {
+    background-color: #2e7d32;
+    color: white;
+    border-color: #2e7d32;
+}
+
+.cell.misplaced {
+    background-color: #ffca28;
+    color: black;
+    border-color: #ffca28;
+}
+
+.cell.wrong {
+    background-color: #b0bec5;
+    color: white;
+    border-color: #b0bec5;
+}
+
+/* Animation "flip" pour les cellules */
+.cell.flip {
+    animation: flip 0.5s ease forwards;
+}
+
+@keyframes flip {
+    0% { transform: rotateX(0deg); }
+    50% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0deg); }
+}
+
+/* Animation "shake" pour la ligne */
+.row.shake {
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+#keyboard {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.key {
+    width: 40px;
+    height: 50px;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.2s;
+}
+
+.key:hover {
+    background-color: #ccc;
+    transform: scale(1.1);
+}
+
+.key.used.correct {
+    background-color: #2e7d32;
+    color: white;
+}
+
+.key.used.misplaced {
+    background-color: #ffca28;
+    color: black;
+}
+
+.key.used.wrong {
+    background-color: #b0bec5;
+    color: white;
+}
+
+/* Animation "bounce" pour les touches */
+.key.bounce {
+    animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+#message {
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+}
+
+#replay-btn, #share-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#replay-btn:hover:not(:disabled), #share-btn:hover:not(:disabled) {
+    background-color: #1b5e20;
+}
