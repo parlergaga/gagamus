@@ -152,6 +152,12 @@ p {
     margin-top: 20px;
 }
 
+#yesterday-word {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
 #replay-btn, #share-btn {
     margin: 10px 5px 0;
     padding: 10px 20px;

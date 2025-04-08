@@ -16,12 +16,12 @@ const motsGaga = [
     "gabelou", "galandage", "galapiat", "gambelle", "gambinotte", "gandou", "gandouze", "gapiand", "garagna", "gâté",
     "gnaque", "gnaquer", "godiveau", "gôgne", "gorgeon", "gouillat", "grabotter", "harte", "jarjille", "jabiasser",
     "jâcounasse", "jâcounasserie", "jambe-d'airelle", "jambe-d'herse", "japille", "japiller", "jumelle", "jean-ma-mere", "jupi",
-    "lancer", "lancieu", "lapider", "lapide-chretien", "lavorger", "lermuse", "lierche", "liquer", "liqueter", "lourde",
-    "luche", "luches", "mâchurer", "manchonner", "mâcle", "malûche", "maneille", "mani", "manne", "manuchard", "marpailler",
+    "lancer", "lancieu", "lapider", "lapide-chretien", "lavorger", "lermuse", "liquer", "liqueter", "lourde",
+    "luche", "mâchurer", "manchonner", "macle", "maluche", "maneille", "mani", "manne", "manuchard", "marpailler",
     "matefaim", "matru", "mazanter", "mener", "mieux", "miladzeu", "milapiat", "minater", "moments", "moulachique",
     "nioche", "oublier", "oussu", "ollagne", "pagnot", "paillat", "pampille", "patère", "pattemouille", "pège", "pegeat",
     "peger", "petafiner", "pialousse", "piat", "pichorgner", "pimpignole", "piquerle", "pitanche", "pitancher", "plaindre",
-    "plat-au-four", "pourette", "quillorches", "quillorcher", "quina", "quinarelle", "quiner", "quiniauder", "rabouret",
+    "plataufour", "pourette", "quillorches", "quillorcher", "quina", "quinarelle", "quiner", "quiniauder", "rabouret",
     "rachat", "rache", "racine", "raffeter", "racuit", "ragraton", "ramasilles", "ramasser", "râpée", "rapiat", "raptaret",
     "rave", "rédimer", "reiboit", "roupiane", "sabouillat", "sabouiller", "saccaraud", "sagouiller", "sale", "sampiller",
     "sarrasson", "satou", "sibère", "vogue"
@@ -31,6 +31,15 @@ function getDailyWord() {
     const today = new Date().toDateString();
     let hash = 0;
     for (let i = 0; i < today.length; i++) hash = (hash * 31 + today.charCodeAt(i)) % motsGaga.length;
+    return motsGaga[hash];
+}
+
+function getYesterdayWord() {
+    const yesterday = new Date();
+    yesterday.setDate(yesterday.getDate() - 1);
+    let hash = 0;
+    const yesterdayStr = yesterday.toDateString();
+    for (let i = 0; i < yesterdayStr.length; i++) hash = (hash * 31 + yesterdayStr.charCodeAt(i)) % motsGaga.length;
     return motsGaga[hash];
 }
 
@@ -219,6 +228,7 @@ function initGame() {
         "T’as fini tes 6 essais aujourd’hui, reviens demain !";
     replayBtn.style.display = "none";
     shareBtn.style.display = "none";
+    document.getElementById("yesterday-word").textContent = `Mot d’hier : ${getYesterdayWord()}`;
 }
 
 function endGame() {
