@@ -76,13 +76,13 @@ p {
 }
 
 .cell {
-    width: 40px; /* Réduit de 50px à 40px */
-    height: 40px; /* Réduit de 50px à 40px */
+    width: 40px;
+    height: 40px;
     border: 2px solid #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px; /* Réduit de 24px à 20px pour rester lisible */
+    font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
     background: white;
@@ -115,24 +115,24 @@ p {
 #keyboard {
     margin: 20px 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Retour à wrap pour 2 lignes */
     justify-content: center;
     gap: 5px;
-    max-width: 500px;
+    max-width: 500px; /* Retour à 500px pour une disposition naturelle */
     margin-left: auto;
     margin-right: auto;
 }
 
 .key {
-    width: 30px; /* Réduit de 40px à 30px */
-    height: 40px; /* Réduit de 50px à 40px */
+    width: 35px; /* Réduit de 40px (original) à 35px, plus grand que 25px */
+    height: 45px; /* Réduit de 50px (original) à 45px */
     background: #ddd;
     border: 1px solid #bbb;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px; /* Réduit de 18px à 16px pour rester lisible */
+    font-size: 16px; /* Réduit de 18px (original) à 16px */
     cursor: pointer;
     text-transform: uppercase;
     transition: transform 0.2s;
@@ -148,6 +148,15 @@ p {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
+}
+
+/* Ajustement pour Effacer et Entrée */
+.key:nth-child(27) { /* Effacer (⌫) */
+    width: 50px; /* Réduit de 60px à 50px */
+}
+
+.key:nth-child(28) { /* Entrée (↵) */
+    width: 50px; /* Réduit de 60px à 50px */
 }
 
 #message {
