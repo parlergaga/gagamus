@@ -2,14 +2,18 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     background: linear-gradient(45deg, #2e7d32, #ffffff);
     color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #game {
     max-width: 600px;
-    margin: 0 auto;
+    width: 100%;
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 10px;
@@ -72,13 +76,13 @@ p {
 }
 
 .cell {
-    width: 50px;
-    height: 50px;
+    width: 40px; /* Réduit de 50px à 40px */
+    height: 40px; /* Réduit de 50px à 40px */
     border: 2px solid #ccc;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 20px; /* Réduit de 24px à 20px pour rester lisible */
     font-weight: bold;
     text-transform: uppercase;
     background: white;
@@ -120,15 +124,15 @@ p {
 }
 
 .key {
-    width: 40px;
-    height: 50px;
+    width: 30px; /* Réduit de 40px à 30px */
+    height: 40px; /* Réduit de 50px à 40px */
     background: #ddd;
     border: 1px solid #bbb;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 16px; /* Réduit de 18px à 16px pour rester lisible */
     cursor: pointer;
     text-transform: uppercase;
     transition: transform 0.2s;
