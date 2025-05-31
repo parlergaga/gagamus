@@ -1,45 +1,47 @@
 const motsGaga = [
     "abistrogné", "ablagé", "abouser", "aborgnon", "acanit", "accacasser", "accacassonner", "achattir", "adober", "affiner",
     "affortir", "agotailles", "ambignon", "anganche", "apeger", "apette", "appincher", "applater", "aquiger", "aragni",
-    "arraper", "arpions", "artisons", "attraper", "achapeu","à un de ces moments", "bâ", "babeau", "babet", "babielle", "bâchat",
-    "badabet", "badabeu", "badinguet", "baille", "barjaquer", "bamborgne", "baraban",
-    "baronter", "barreaux", "bartassaille", "basane", "batailler", "baveux", "bayayet", "bazeuil",
-    "bazut", "beauseigne", "belet", "benaise", "benon", "berchu", "bichette", "biganche", "bitancher", "bitors", "bitognot",
-    "bobiat", "boge", "bougnette", "boutasse", "brandigoler", "brave", "broger", "bugne", "cacasson",
-    "cafi", "cafuron", "cagnas", "caisse", "camphrer", "canit", "carcameler", "carotte rouge",
-    "catolle", "chanforgne", "cheneau", "chouiner", "claque-dent", "coissou",
-    "consulte", "corbicine", "coufle", "couratter", "crassier","crezieu", "croire", "cuchon", "cuisse", "debarouler", 
-    "debeloise", "debigoiser", "decubasser", "defiferlé", "degoiser", "degrener", "deguiller", "depenaillé", "deprofiter", "des-fois", "dîner","des pleins paillats", "ebarioles",
-    "ebarliaudes", "ebouillé", "ebravager", "ecorpelé", "egrointer", "emaseler", "equevilles",
-    "estanco","entremi","ensiauver", "faramelan", "fayard", "fenêtron","fiarde", "faire-flique", "fouilla", "fourme", "franc", "fricaude",
-    "galapiat", "gambelle", "gambinotte", "gandou", "gandouze", "gapiand", "garagnas", "gâté",
-    "gnaque", "gnaquer", "godiveau", "gôgne", "gouillat", "grabotter", "harte", "jarjille", "jabiasser",
-    "jâcounasse", "jâcounasserie", "jambe-d'airelle","japille", "japiller", "jumelle", "jean-ma-mere", "jupi","jarjille",
-    "lancer", "lancieu", "lapider", "lapide-chretien", "lavorger", "lermuse", "liqueter", "lourde",
-    "luche", "mâchurer", "macle", "maneille", "mani", "manne", "manuchard", "marpailler",
-    "matefaim", "matru", "mazanter", "miladzeu", "milapiat", "minater",  "moulachique","mettre en caisse","mettre la lourde","mouillé de chaud",
-    "nioche", "oublier", "oussu", "ollagne", "pagnot", "paillat", "pampille","passer sous le tram", "patère", "pattemouille", "pège", "pegeat",
-    "petafiner", "pialousse", "piat", "pichorgner", "pimpignole", "piquerle", "pitancher", "plaindre","plan-plan","pranière",
-    "plat au four", "pourette", "quillorches", "quillorcher", "quina", "quinarelle", "quiner", "quiniauder", "rabouret",
-    "rachat", "rache", "racine", "raffeter", "racuit", "ragraton", "ramasilles", "ramasser", "râpée", "rapiat", "raptaret",
-    "rave", "rédimer", "reiboit", "roupiane", "sabouillat", "sabouiller", "saccaraud", "sagouiller", "se mettre en sale", "sampiller",
-    "sarrasson", "satou", "sibère","tabazut","tâcher moyen","tarauder à sec","tateminette","tirer peine","trempe", "vogue","viron", "vois-tu-moi-le",
+    "arraper", "arpions", "artisons", "attraper", "achapeu", "babeau", "babet", "babielle", "bâchat",
+    "badabet", "badabeu", "badinguet", "baille", "barjaquer", "bamborgne", "baraban", "baronter", "barreaux", "bartassaille",
+    "basane", "batailler", "baveux", "bayayet", "bazeuil", "bazut", "beauseigne", "belet", "benaise", "benon", "berchu",
+    "bichette", "biganche", "bitancher", "bitors", "bitognot", "bobiat", "boge", "bougnette", "boutasse", "brandigoler",
+    "brave", "broger", "bugne", "cacasson", "cafi", "cafuron", "cagnas", "caisse", "camphrer", "canit", "carcameler",
+    "catolle", "chanforgne", "cheneau", "chouiner", "coissou", "consulte", "corbicine", "coufle", "couratter", "crassier",
+    "crezieu", "croire", "cuchon", "cuisse", "debarouler", "debeloise", "decubasser", "defiferlé", "degoiser",
+    "degrener", "deguiller", "depenaillé", "deprofiter", "dîner", "ebarioles", "ebarliaudes", "ebouillé", "ebravager",
+    "ecorpelé", "egrointer", "emaseler", "equevilles", "estanco", "entremi", "ensiauver", "faramelan", "fayard", "fenêtron",
+    "fiarde", "fouilla", "fourme", "franc", "fricaude", "galapiat", "gambelle", "gambinotte", "gandou", "gandouze", "gapiand",
+    "garagnas", "gâté", "gnaque", "gnaquer", "godiveau", "gôgne", "gouillat", "grabotter", "harte", "jarjille", "jabiasser",
+    "jâcounasse", "jâcounasserie", "japille", "japiller", "jumelle", "jupi", "lancer", "lancieu", "lapider", "lavorger",
+    "lermuse", "liqueter", "lourde", "luche", "mâchurer", "macle", "maneille", "mani", "manne", "manuchard", "marpailler",
+    "matefaim", "matru", "mazanter", "miladzeu", "milapiat", "minater", "moulachique", "nioche", "oublier", "oussu",
+    "ollagne", "pagnot", "paillat", "pampille", "patère", "pattemouille", "pège", "pegeat", "petafiner", "pialousse",
+    "piat", "pichorgner", "pimpignole", "piquerle", "pitancher", "plaindre", "pranière", "pourette", "quillorches",
+    "quillorcher", "quina", "quinarelle", "quiner", "quiniauder", "rabouret", "rachat", "rache", "racine", "raffeter",
+    "racuit", "ragraton", "ramasilles", "ramasser", "râpée", "rapiat", "raptaret", "rave", "rédimer", "reiboit", "roupiane",
+    "sabouillat", "sabouiller", "saccaraud", "sagouiller", "sarrasson", "satou", "sibère", "tabazut", "tateminette",
+    "trempe", "vogue", "viron"
 ];
+
+// Normalise les mots pour la grille (supprime espaces, tirets, apostrophes)
+function normalizeWord(word) {
+    return word.replace(/[\s'-]/g, '').toLowerCase();
+}
 
 function getDailyWord() {
     const today = new Date().toDateString();
     let hash = 0;
     for (let i = 0; i < today.length; i++) hash = (hash * 31 + today.charCodeAt(i)) % motsGaga.length;
-    return motsGaga[hash];
+    return { original: motsGaga[hash], normalized: normalizeWord(motsGaga[hash]) };
 }
 
-function getYesterdayWord() {
+function getLastWord() {
     const yesterday = new Date();
     yesterday.setDate(yesterday.getDate() - 1);
     let hash = 0;
     const yesterdayStr = yesterday.toDateString();
     for (let i = 0; i < yesterdayStr.length; i++) hash = (hash * 31 + yesterdayStr.charCodeAt(i)) % motsGaga.length;
-    return motsGaga[hash];
+    return { original: motsGaga[hash], normalized: normalizeWord(motsGaga[hash]) };
 }
 
 let motATrouver = getDailyWord();
@@ -85,13 +87,13 @@ function initGrid() {
     for (let i = 0; i < 6; i++) {
         const row = document.createElement("div");
         row.className = "row";
-        for (let j = 0; j < motATrouver.length; j++) {
+        for (let j = 0; j < motATrouver.normalized.length; j++) {
             const cell = document.createElement("div");
             cell.className = "cell";
             if (i < essais.length) {
                 cell.textContent = essais[i][j].toUpperCase();
-                cell.classList.add(essais[i][j] === motATrouver[j] ? "correct" : motATrouver.includes(essais[i][j]) ? "misplaced" : "wrong");
-            } else if (i === essaiActuel && j === 0) cell.textContent = motATrouver[0].toUpperCase();
+                cell.classList.add(essais[i][j] === motATrouver.normalized[j] ? "correct" : motATrouver.normalized.includes(essais[i][j]) ? "misplaced" : "wrong");
+            } else if (i === essaiActuel && j === 0) cell.textContent = motATrouver.normalized[0].toUpperCase();
             if (i === essaiActuel && j === currentPosition && essaisRestants > 0) cell.classList.add("active");
             row.appendChild(cell);
         }
@@ -112,13 +114,11 @@ function initKeyboard() {
     const backspace = document.createElement("div");
     backspace.className = "key";
     backspace.textContent = "⌫";
-    backspace.style.width = "60px";
     backspace.addEventListener("click", removeLetter);
     keyboard.appendChild(backspace);
     const enter = document.createElement("div");
     enter.className = "key";
     enter.textContent = "↵";
-    enter.style.width = "60px";
     enter.addEventListener("click", submitGuess);
     keyboard.appendChild(enter);
 }
@@ -128,13 +128,13 @@ function addLetter(letter) {
     const rows = document.querySelectorAll(".row");
     const cells = rows[essaiActuel].querySelectorAll(".cell");
     const key = Array.from(document.querySelectorAll(".key")).find(k => k.textContent === letter);
-    if (currentPosition < motATrouver.length) {
+    if (currentPosition < motATrouver.normalized.length) {
         cells[currentPosition].textContent = letter.toUpperCase();
         cells[currentPosition].classList.remove("active");
         key.classList.add("bounce");
         setTimeout(() => key.classList.remove("bounce"), 300);
         currentPosition++;
-        if (currentPosition < motATrouver.length) cells[currentPosition].classList.add("active");
+        if (currentPosition < motATrouver.normalized.length) cells[currentPosition].classList.add("active");
     }
 }
 
@@ -145,14 +145,14 @@ function removeLetter() {
     currentPosition--;
     cells[currentPosition].textContent = "";
     cells[currentPosition].classList.add("active");
-    if (currentPosition + 1 < motATrouver.length) cells[currentPosition + 1].classList.remove("active");
+    if (currentPosition + 1 < motATrouver.normalized.length) cells[currentPosition + 1].classList.remove("active");
 }
 
 function generateShareText() {
     let text = `Gagamus ${6 - essaisRestants}/6\n`;
     essais.forEach(guess => {
         let line = "";
-        for (let i = 0; i < guess.length; i++) line += guess[i] === motATrouver[i] ? "🟩" : motATrouver.includes(guess[i]) ? "🟨" : "⬜";
+        for (let i = 0; i < guess.length; i++) line += guess[i] === motATrouver.normalized[i] ? "🟩" : motATrouver.normalized.includes(guess[i]) ? "🟨" : "⬜";
         text += line + "\n";
     });
     return text.trim();
@@ -167,8 +167,8 @@ function submitGuess() {
     const cells = rows[essaiActuel].querySelectorAll(".cell");
     const keys = document.querySelectorAll(".key");
     let guess = Array.from(cells).map(cell => cell.textContent.toLowerCase()).join("");
-    if (guess.length !== motATrouver.length) {
-        message.textContent = `Faut ${motATrouver.length} lettres, t’es à côté, pela !`;
+    if (guess.length !== motATrouver.normalized.length) {
+        message.textContent = `Faut ${motATrouver.normalized.length} lettres, t’es à côté, pela !`;
         rows[essaiActuel].classList.add("shake");
         setTimeout(() => rows[essaiActuel].classList.remove("shake"), 500);
         return;
@@ -180,10 +180,10 @@ function submitGuess() {
         cell.classList.add("flip");
         setTimeout(() => {
             const key = Array.from(keys).find(k => k.textContent === guess[i]);
-            if (guess[i] === motATrouver[i]) {
+            if (guess[i] === motATrouver.normalized[i]) {
                 cell.classList.add("correct");
                 if (key) key.classList.add("used", "correct");
-            } else if (motATrouver.includes(guess[i])) {
+            } else if (motATrouver.normalized.includes(guess[i])) {
                 cell.classList.add("misplaced");
                 if (key && !key.classList.contains("correct")) key.classList.add("used", "misplaced");
             } else {
@@ -195,22 +195,22 @@ function submitGuess() {
     });
     essaiActuel++;
     currentPosition = 1;
-    if (guess === motATrouver) {
+    if (guess === motATrouver.normalized) {
         setTimeout(() => {
             const essaisUtilises = 6 - essaisRestants;
-            message.textContent = `Beau gosse ! '${motATrouver}' en ${essaisUtilises} essais ! (Restants : ${MAX_ESSAIS_JOUR - getDailyEssais()})`;
+            message.textContent = `Beau gosse ! '${motATrouver.original}' en ${essaisUtilises} essais ! (Restants : ${MAX_ESSAIS_JOUR - getDailyEssais()})`;
             endGame();
-        }, motATrouver.length * 100 + 500);
+        }, motATrouver.normalized.length * 100 + 500);
     } else if (essaisRestants === 0) {
         setTimeout(() => {
-            message.textContent = `Tintin ! C’était '${motATrouver}'. (Restants : ${MAX_ESSAIS_JOUR - getDailyEssais()})`;
+            message.textContent = `Tintin ! C’était '${motATrouver.original}'. (Restants : ${MAX_ESSAIS_JOUR - getDailyEssais()})`;
             endGame();
-        }, motATrouver.length * 100 + 500);
+        }, motATrouver.normalized.length * 100 + 500);
     } else {
         setTimeout(() => {
             message.textContent = `(Restants : ${MAX_ESSAIS_JOUR - getDailyEssais()})`;
             initGrid();
-        }, motATrouver.length * 100 + 500);
+        }, motATrouver.normalized.length * 100 + 500);
     }
 }
 
@@ -223,16 +223,16 @@ function initGame() {
     initGrid();
     initKeyboard();
     message.textContent = canPlay() ? 
-        `Mot gaga de ${motATrouver.length} lettres, ça commence par '${motATrouver[0]}', vas-y ! (Restants : ${MAX_ESSAIS_JOUR - getDailyEssais()})` : 
+        `Mot gaga de ${motATrouver.normalized.length} lettres, ça commence par '${motATrouver.normalized[0]}', vas-y ! (Restants : ${MAX_ESSAIS_JOUR - getDailyEssais()})` : 
         "T’as fini tes 6 essais aujourd’hui, reviens demain !";
     replayBtn.style.display = "none";
     shareBtn.style.display = "none";
-    document.getElementById("yesterday-word").textContent = `Mot d’hier : ${getYesterdayWord()}`;
+    document.getElementById("last-word").textContent = `Mot d’hier : ${getLastWord().original}`;
 }
 
 function endGame() {
-    replayBtn.style.display = "block";
-    shareBtn.style.display = "block";
+    replayBtn.style.display = "inline-block";
+    shareBtn.style.display = "inline-block";
     document.removeEventListener("keydown", handleKeyPress);
 }
 

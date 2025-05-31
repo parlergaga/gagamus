@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 0;
     background: linear-gradient(45deg, #2e7d32, #ffffff);
@@ -12,49 +11,54 @@ body {
 }
 
 #game {
-    max-width: 600px;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    max-width: 500px;
+    width: 90%;
+    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centre tous les éléments textuels à l'intérieur */
 }
 
 h1 {
     color: #2e7d32;
-    font-size: 36px;
-    margin-bottom: 5px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 32px;
+    margin: 0 0 10px;
+    font-weight: bold;
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
     margin: 0 0 10px;
     font-style: italic;
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
-    margin-bottom: 10px;
+    margin: 0 0 10px;
 }
 
 #legend {
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #333;
+    margin: 0 0 15px;
+    font-size: 14px;
+    color: #444;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .legend-item {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 20px;
-    height: 20px;
-    margin: 0 5px 0 10px;
-    border: 2px solid #ccc;
-    font-size: 14px;
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+    border: 2px solid #444;
+    font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -65,13 +69,13 @@ p {
 
 #grid {
     display: grid;
-    gap: 5px;
-    margin-bottom: 20px;
+    gap: 4px;
+    margin: 0 auto 15px;
 }
 
 .row {
     display: flex;
-    gap: 5px;
+    gap: 4px;
     justify-content: center;
 }
 
@@ -113,29 +117,28 @@ p {
 }
 
 #keyboard {
-    margin: 20px 0;
+    margin: 15px auto;
     display: flex;
-    flex-wrap: wrap; /* Retour à wrap pour 2 lignes */
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 5px;
-    max-width: 500px; /* Retour à 500px pour une disposition naturelle */
-    margin-left: auto;
-    margin-right: auto;
+    gap: 4px;
+    max-width: 400px;
 }
 
 .key {
-    width: 35px; /* Réduit de 40px (original) à 35px, plus grand que 25px */
-    height: 45px; /* Réduit de 50px (original) à 45px */
+    width: 35px;
+    height: 45px;
     background: #ddd;
     border: 1px solid #bbb;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px; /* Réduit de 18px (original) à 16px */
+    font-size: 16px;
     cursor: pointer;
     text-transform: uppercase;
     transition: transform 0.2s;
+    box-sizing: border-box;
 }
 
 .key:hover { background: #ccc; transform: scale(1.1); }
@@ -150,31 +153,28 @@ p {
     100% { transform: scale(1); }
 }
 
-/* Ajustement pour Effacer et Entrée */
-.key:nth-child(27) { /* Effacer (⌫) */
-    width: 50px; /* Réduit de 60px à 50px */
-}
-
-.key:nth-child(28) { /* Entrée (↵) */
-    width: 50px; /* Réduit de 60px à 50px */
-}
-
 #message {
-    font-size: 18px;
+    font-size: 16px;
     color: #333;
-    margin-top: 20px;
+    margin: 15px 0;
 }
 
-#yesterday-word {
+#last-word {
     font-size: 14px;
     color: #666;
+    margin: 10px 0;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     margin-top: 10px;
 }
 
 #replay-btn, #share-btn {
-    margin: 10px 5px 0;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 16px;
+    font-size: 14px;
     background: #2e7d32;
     color: white;
     border: none;
