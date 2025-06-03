@@ -155,7 +155,7 @@ function generateShareText() {
         for (let i = 0; i < guess.length; i++) line += guess[i] === motATrouver.normalized[i] ? "🟩" : motATrouver.normalized.includes(guess[i]) ? "🟨" : "⬜";
         text += line + "\n";
     });
-    return text.trim();
+    return text.trim() + "\nJoue à GAGAMUS : https://parlergaga.github.io/gagamus/";
 }
 
 function submitGuess() {
