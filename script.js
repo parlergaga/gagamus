@@ -7,7 +7,7 @@ const motsGaga = [
     "bichette", "biganche", "bitancher", "bitors", "bitognot", "bobiat", "boge", "bougnette", "boutasse", "brandigoler",
     "brave", "broger", "bugne", "cacasson", "cafi", "cafuron", "cagnas", "caisse", "camphrer", "canit", "carcameler",
     "catolle", "chanforgne", "cheneau", "chouiner", "coissou", "consulte", "corbicine", "coufle", "couratter", "crassier",
-    "crezieu", "croire", "cuchon", "cuisse", "debarouler", "debeloise", "decubasser", "defiferlé", "degoiser",
+    "crezieu", "croire", "cuchon", "cuisse", "debarouler", "debeloise", "debigoiser", "decubasser", "defiferlé", "degoiser",
     "degrener", "deguiller", "depenaillé", "deprofiter", "dîner", "ebarioles", "ebarliaudes", "ebouillé", "ebravager",
     "ecorpelé", "egrointer", "emaseler", "equevilles", "estanco", "entremi", "ensiauver", "faramelan", "fayard", "fenêtron",
     "fiarde", "fouilla", "fourme", "franc", "fricaude", "galapiat", "gambelle", "gambinotte", "gandou", "gandouze", "gapiand",
